@@ -1,4 +1,4 @@
-//esta es una de las formas que se puede exportar las funcionalidades
+//NOTE: esta es una de las formas que se puede exportar las funcionalidades
 
 // const add =(a,b) => a+b;
 // const substract =(a,b) => a-b;
@@ -9,7 +9,7 @@
 
 //-------------------------------------------------------------------------------------
 
-//se puede hacer de forma general añadiendo la palabra reservada exports antes de la const
+//NOTE: se puede hacer de forma general añadiendo la palabra reservada exports antes de la const
 
 exports.add = (a, b) => a + b;
 exports.substract = (a, b) => a - b;

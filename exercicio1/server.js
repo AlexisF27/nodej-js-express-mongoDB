@@ -1,8 +1,8 @@
-// How NodeJs differs from Vanilla JSON 
+// NOTE: How NodeJs differs from Vanilla JSON 
 //  - Node runs on a server - not in a brownser (backend not fronted)
 //  - The console is the terminal window
 console.log('Hello World')
-// en la consola executar node exercicio1/server (no es necesario la terminacion js)
+// ALL: en la consola executar node exercicio1/server (no es necesario la terminacion js)
 
 //  - global objects istead of window object
 console.log(global)
@@ -26,7 +26,8 @@ const path = require('path');
 // console.log(path.extname(__filename))
 // console.log(path.parse(__filename))
 
-//se le puede hacer destrucutrar el contenido del archivo al cual estoy accediendo y solamente traer sus funciones 
+// NOTE: se le puede hacer destrucutrar el contenido del archivo al cual estoy accediendo
+//   y solamente traer sus funciones 
 
 const {add, substract, multiply, divide} = require('./math');
 
