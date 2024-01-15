@@ -6,12 +6,34 @@
 const {format} = require('date-fns');
 const { v4: uuid} = require('uuid');
 
-console.log(format(new Date(), 'yyyyMMdd\tHH:mm:ss'));
+const fs = require('fs');
+const fsPromises = require('fs').promises;
+const path = require('path')
 
-console.log(uuid());
-console.log("HEllo");
+const logEvents = async (message) =>{
+  const dateTime = `${format(new Date(), 'yyyyMMdd\tHH:mm:ss')}`;
+  const logItem = `${dateTime} \t${uuid()}\t${message} \n`
+  console.log(logItem);
+
+  try {
+    if(!fs.existsSync(path.join(__dirname, 'logs'))){
+      await fsPromises.mkdir(path.join(__dirname, 'logs'));
+    }
+    //testing
+    await fsPromises.appendFile(path.join(__dirname, 'logs', 'eventLog.txt'), logItem);
+  
+  } catch (error) {
+    console.log(error);
+    
+  }
+}
+
+module.exports = logEvents;
 //NOTE:
 //  npm i nodemon --save-dev that is how we install devdependencies 
 
 //npm rm nodemon -D
 // si se desistala alguna dependencia, esta no sera removide del packege, se lo tiene que hacer manual 
+
+
+

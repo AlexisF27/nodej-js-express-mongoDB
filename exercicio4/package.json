@@ -10,8 +10,8 @@
     "nodemon": "^3.0.2"
   },
   "scripts": {
-    "start": "node logEvents",
-    "dev": "nodemon logEvents"
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "author": "Alexis Fernando Rodriguez Quezada",
   "license": "ISC",
