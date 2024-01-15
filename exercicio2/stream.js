@@ -7,9 +7,9 @@ const ws = fs.createWriteStream(path.join(__dirname, 'files', 'newLoremStreamFun
 
 
 
-// rs.on('data', (dataChunk) => {
-//   ws.write(dataChunk);
-// })
+rs.on('data', (dataChunk) => {
+  ws.write(dataChunk);
+})
 
 //NOTE: other way 
 
