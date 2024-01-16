@@ -10,17 +10,30 @@ class Emmiter extends EventEmmiter {};
 
 //initialize object
 const myEmmiter = new Emmiter();
-
+myEmmiter.on('log', (msg, filename) => logEvents(msg,filename));
 
 const PORT = process.env.PORT || 3500;
 
 const serveFile = async (filePath, contentType, res) => {
   try {
-    const data = await fsPromises.readFile(filePath,  'utf8');
-    res.writeHead(200, {'Content-Type': contentType});
-    res.end(data);
+    const rawData = await fsPromises.readFile(
+      filePath,  
+      !contentType.includes('image') ? 'UTF8' : ''
+    );
+    const data = contentType === 'application/json' ? JSON.parse(rawData) : rawData;
+    console.log("-----",filePath);
+    res.writeHead(
+      // filePath.includes('404.html') ? 404 : 200, 
+      filePath.includes('404.html') ? 404 : 200, 
+      {'Content-Type': contentType}
+    );
+    //console.log("here----------------------------------------------------------------------- here",res,filePath.includes('404.html') );
+    res.end(
+      contentType === 'application/json' ? JSON.stringify(data): data
+    );
   } catch (error) {
     console.log(error);
+    myEmmiter.emit('log', `${error.name} : ${error.message}`, 'errLog.txt');
     res.statusCode = 500;
     res.end();
 
@@ -32,6 +45,8 @@ const serveFile = async (filePath, contentType, res) => {
 const server = http.createServer((request,response) => {
     try {
       console.log(request.url, request.method);
+
+    myEmmiter.emit('log', `${request.url}\t ${ request.method}`, 'reqLog.txt');
 
       let filePath;
       //NOTE: esta es la forma de hacer una llamada y devolver un cierto contenido con sus especificiaciones
@@ -65,10 +80,10 @@ const server = http.createServer((request,response) => {
             contentType = 'text/json';
             break;
           case '.jpg':
-            contentType = 'text/jpeg';
+            contentType = 'image/jpeg';
             break;
           case '.png':
-            contentType = 'text/png';
+            contentType = 'image/png';
             break;
           case '.txt':
             contentType = 'text/plain';
@@ -76,7 +91,7 @@ const server = http.createServer((request,response) => {
           default:
             contentType = 'text/html';
         }
-        console.log(contentType);
+
     
         filePath = contentType === 'text/html' && request.url === '/'
                       ? path.join(__dirname, 'views', 'index.html')
@@ -94,7 +109,7 @@ const server = http.createServer((request,response) => {
     
         if(fileExists){
           //serve the file
-          console.log(filePath);
+          console.log(path.parse(filePath).base, response.statusCode);
           serveFile(filePath, contentType, response);
         }else{
           // 404
@@ -111,6 +126,8 @@ const server = http.createServer((request,response) => {
             default:
               //serve 404 response 
               serveFile(path.join(__dirname, 'views', '404.html'), 'text/html', response);
+              // console.log(path.join(__dirname, 'views', '404.html').includes('404.html'), path.join(__dirname, 'views', '404.html'));
+
           }
         }
     
@@ -120,13 +137,3 @@ const server = http.createServer((request,response) => {
   })
 
 server.listen(PORT, () => console.log(`Server running on PORT ${PORT}`)); 
-
-
-// add listener for the log event
-
-// myEmmiter.on('log', (msg) => logEvents(msg));
-
-// setTimeout(() => {
-//   //Emit event
-//   myEmmiter.emit('log', 'Log event emmiter');
-// },2000)
