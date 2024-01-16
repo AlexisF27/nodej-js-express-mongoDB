@@ -13,7 +13,6 @@ const myEmmiter = new MyEmmiter();
 myEmmiter.on('log', (msg) => logEvents(msg));
 
 setTimeout(() => {
-    //Emit event
-
+  //Emit event
   myEmmiter.emit('log', 'Log event emmiter');
 },2000)
