@@ -16,11 +16,11 @@ const logEvents = async (message, logName) =>{
   console.log(logItem);
 
   try {
-    if(!fs.existsSync(path.join(__dirname, 'logs'))){
-      await fsPromises.mkdir(path.join(__dirname, 'logs'));
+    if(!fs.existsSync(path.join(__dirname, '..',  'logs'))){
+      await fsPromises.mkdir(path.join(__dirname,'..', 'logs'));
     }
     //testing
-    await fsPromises.appendFile(path.join(__dirname, 'logs', logName), logItem);
+    await fsPromises.appendFile(path.join(__dirname, '..', 'logs', logName), logItem);
   
   } catch (error) {
     console.log(error);
@@ -28,7 +28,18 @@ const logEvents = async (message, logName) =>{
   }
 }
 
-module.exports = logEvents;
+const logger = (request, response, next) => {
+  //the request method - 
+  //the headers significa where the request is coming from 
+  //the url that is being requested
+  //que file va a crear 
+  logEvents(`${request.method} \t ${request.header.oringin}  \t ${request.url} `, 'requestLog.txt')
+  console.log(`${request.method} - ${request.path} `);
+  next();
+}; 
+
+
+module.exports = {logEvents , logger};
 //NOTE:
 //  npm i nodemon --save-dev that is how we install devdependencies 
 

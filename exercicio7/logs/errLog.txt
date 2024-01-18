@@ -1,1 +1,2 @@
 20240116	16:37:15 	68279618-5b9c-414e-93ef-ed7176d7df91	RangeError : Invalid status code: false 
+20240118	06:42:25 	a0aacafc-8780-41d8-b718-40cfb445ca94	Error:  not allowed by CORS 
