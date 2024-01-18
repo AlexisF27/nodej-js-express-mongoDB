@@ -25,12 +25,32 @@ app.get('/*', (request, response) => {
 });
 
 
+
 app.get('/hello(.html)?', (request, response, next) => {
   console.log("That route does not exist");
   next();
-
 }, (request, response) => {
   response.send("Hello World")
+});
+
+const one = (request, response, next) =>{
+  console.log('one');
+  next();
+}
+
+const two = (request, response, next) =>{
+  console.log('two');
+  next();
+}
+
+const tree = (request, response, next) =>{
+  response.send("One - Two - Tree")
+}
+
+app.get('/chain.html', [one,two,tree]);
+
+app.get('/*', (request, response) => {
+  response.status(404).sendFile(path.join(__dirname, 'views', '404.html')); //302 by default 
 });
 
 app.get('/*')
