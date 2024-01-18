@@ -5,30 +5,19 @@ const path = require('path');
 const {logger} = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const cors = require('cors');
+const corsOption = require('./config/corsOptions')
 const PORT = process.env.PORT || 3500;
+
 
 app.use(logger);
 
-const whiteList = ['https://www.yoursite.com', 'http://localhost:3500'];
-const corsOption = {
-  origin: (origin, callback) => {
-    if (whiteList.indexOf(origin) !== -1 || !origin){
-      callback(null, true);
-    } else {
-      callback(new Error(' not allowed by CORS'))
-    }
-  }, 
-  optionSuccessSTatus:200
-}
 app.use(cors(corsOption));
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use('/', express.static(path.join(__dirname, '/public')));
-app.use('/subdir', express.static(path.join(__dirname, '/public')));
 
+app.use('/', express.static(path.join(__dirname, '/public')));
 app.use('/', require('./routes/root'));
-app.use('/subdir', require('./routes/subdir'));
 app.use('/employees', require('./routes/api/employees'));
 
 
