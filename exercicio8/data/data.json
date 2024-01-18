@@ -1,0 +1,14 @@
+{
+  "exemplo1": {
+    "name": "Alice",
+    "age": 25,
+    "city": "Sampletown",
+    "isStudent": true
+  },
+  "exemplo2": {
+    "name": "Alice",
+    "age": 25,
+    "city": "Sampletown",
+    "isStudent": true
+  }
+}
