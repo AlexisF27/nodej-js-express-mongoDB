@@ -16,6 +16,7 @@ const createNewEmployee = (request, response) => {
     age: request.body.age,
     city: request.body.city,
     isStudent: request.body.isStudent
+    
   }
   if (!newEmployee.name || !newEmployee.age) {
     return response.status(4).json({ 'message': 'Name and age is required' });
