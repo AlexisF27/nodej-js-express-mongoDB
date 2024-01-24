@@ -4,8 +4,6 @@ const data = {
 };
 
 
-
-
 const getAllEmployees = (request, response) => {
   response.json(data.employees);
 };
@@ -28,30 +26,30 @@ const createNewEmployee = (request, response) => {
 };
 
 const updateEmployee = (request, response) => {
-
+  
   const employee = data.employees.find(emp => emp.id === parseInt(request.body.id));
-  if (!employee) {
-    return response.status(400).json({ "message": `Employee ID ${request.body.id} not found` });
+  if(!employee){
+    return response.status(400).json({ "message": `Employee ID ${request.body.id} not found`});
   }
-  if (request.body.name) employee.name = request.body.name;
-  if (request.body.age) employee.age = request.body.age;
-  if (request.body.city) employee.city = request.body.city;
-  if (request.body.isStudent) employee.isStudent = request.body.isStudent;
+  if(request.body.name) employee.name = request.body.name;
+  if(request.body.age) employee.age = request.body.age;
+  if(request.body.city) employee.city = request.body.city;
+  if(request.body.isStudent) employee.isStudent = request.body.isStudent;
 
   const filteredArray = data.employees.filter(emp => emp.id !== parseInt(request.body.id));
   const unsortedArray = [...filteredArray, employee]
-  data.setEmployee(unsortedArray.sort((a, b) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0));
+  data.setEmployee(unsortedArray.sort((a,b) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0));
   response.json(data.employees);
-
-
+  
+  
   response.json({
   })
 };
 
 const deleteEmplyee = (request, response) => {
   const employee = data.employees.find(emp => emp.id === parseInt(request.body.id));
-  if (!employee) {
-    return response.status(400).json({ "message": `Employee ID ${request.body.id} not found` });
+  if(!employee){
+    return response.status(400).json({ "message": `Employee ID ${request.body.id} not found`});
   }
   const filteredArray = data.employees.filter(emp => emp.id !== parseInt(request.body.id));
   data.setEmployee([...filteredArray]);
@@ -60,8 +58,8 @@ const deleteEmplyee = (request, response) => {
 
 const getEmployee = (request, response) => {
   const employee = data.employees.find(emp => emp.id === parseInt(request.body.id));
-  if (!employee) {
-    return response.status(400).json({ "message": `Employee ID ${request.body.id} not found` });
+  if(!employee){
+    return response.status(400).json({ "message": `Employee ID ${request.body.id} not found`});
   }
   response.json(employee);
 };
