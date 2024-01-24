@@ -1,0 +1,11 @@
+20240116	16:37:15 	68279618-5b9c-414e-93ef-ed7176d7df91	RangeError : Invalid status code: false 
+20240118	06:42:25 	a0aacafc-8780-41d8-b718-40cfb445ca94	Error:  not allowed by CORS 
+20240118	12:44:56 	21dba6c5-0bb8-4bcc-9ba3-785bd7c8ee37	TypeError: request.json is not a function 
+20240118	12:46:23 	ffffe21e-3597-4435-be0f-eeb95fefcdca	SyntaxError: Unexpected token A in JSON at position 23 
+20240118	12:46:39 	f9848251-8f41-4c75-ae64-ae374c5f4a13	SyntaxError: Unexpected token A in JSON at position 21 
+20240118	12:46:51 	480ad56a-470a-4998-bfdd-0a76f5704579	SyntaxError: Unexpected token A in JSON at position 21 
+20240118	12:48:07 	3159b2ac-67ec-4812-a990-f76c9ab3a7b0	SyntaxError: Unexpected token A in JSON at position 21 
+20240118	12:48:30 	d6a44858-eb08-4076-8459-731117f1748b	TypeError: request.json is not a function 
+20240118	12:50:13 	5b34c411-cbfc-4ff1-b6dd-a25b8ee48d5d	TypeError: request.json is not a function 
+20240118	12:50:27 	83dc97a5-3eca-4a72-aaec-3cefdd07ffae	TypeError: request.json is not a function 
+20240124	19:00:56 	3cfd6c1d-e15a-4470-aa94-92f72987c4c5	SyntaxError: Unexpected string in JSON at position 27 
