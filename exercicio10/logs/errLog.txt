@@ -8,3 +8,4 @@
 20240118	12:48:30 	d6a44858-eb08-4076-8459-731117f1748b	TypeError: request.json is not a function 
 20240118	12:50:13 	5b34c411-cbfc-4ff1-b6dd-a25b8ee48d5d	TypeError: request.json is not a function 
 20240118	12:50:27 	83dc97a5-3eca-4a72-aaec-3cefdd07ffae	TypeError: request.json is not a function 
+20240124	19:00:56 	3cfd6c1d-e15a-4470-aa94-92f72987c4c5	SyntaxError: Unexpected string in JSON at position 27 

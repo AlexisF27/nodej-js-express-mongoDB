@@ -68,3 +68,7 @@
 20240118	12:50:13 	a10a05bc-c4a0-4447-969e-fc54cf262da6	DELETE 	 undefined  	 /employees?name=Alexis&age=25&city=Vila%20Nova%20de%20Gaia&isStudent=true  
 20240118	12:50:27 	16d82a8e-db5c-49d1-b0cd-503bdabef92d	DELETE 	 undefined  	 /employees  
 20240118	12:50:41 	772785e0-464f-4abe-9429-e100aeeb1a12	DELETE 	 undefined  	 /employees  
+20240124	19:00:56 	be02ec82-b14c-478c-bb53-8a7485b39681	POST 	 undefined  	 /register?username&password  
+20240124	19:01:05 	560a04d5-9d9b-4952-a785-d73356c86880	POST 	 undefined  	 /register?username&password  
+20240124	19:01:41 	6ecfa11e-d759-475d-9dbc-0655e55e8417	POST 	 undefined  	 /register?username&password  
+20240124	19:03:20 	09a62868-7ee3-4403-88ca-f89eeb1826fe	POST 	 undefined  	 /register?username&password  

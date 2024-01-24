@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "username": "Alexis",
+    "password": "$2b$10$4TR3/tItJczybRpZG6CB0uICPiRTWevnUwis0wD8CzI7MbAM7v8/q"
+  },
+  {
+    "username": "Schubert",
+    "password": "$2b$10$TZw/91XGX3sQBYZEsKqGw.yrTFZSe6dqgJbMC0DQ7kB.KqOQk99ua"
+  }
+]
