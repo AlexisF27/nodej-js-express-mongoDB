@@ -72,3 +72,10 @@
 20240124	19:01:05 	560a04d5-9d9b-4952-a785-d73356c86880	POST 	 undefined  	 /register?username&password  
 20240124	19:01:41 	6ecfa11e-d759-475d-9dbc-0655e55e8417	POST 	 undefined  	 /register?username&password  
 20240124	19:03:20 	09a62868-7ee3-4403-88ca-f89eeb1826fe	POST 	 undefined  	 /register?username&password  
+20240124	19:47:41 	d2f707b8-ac97-4f4d-b335-abfadf9feb0e	GET 	 undefined  	 /register  
+20240124	19:47:49 	27c4313c-d3e1-4090-996a-dcc10d3ea2d7	GET 	 undefined  	 /auth  
+20240124	19:47:51 	0e1e0950-cae8-4fb8-9abf-aefabb022af7	GET 	 undefined  	 /auth  
+20240124	19:48:20 	2ced145c-ef70-4db3-88d5-fe278d8501b7	GET 	 undefined  	 /auth  
+20240124	19:48:28 	297b7f16-b4f7-491b-83e5-40af20740138	POST 	 undefined  	 /auth  
+20240124	19:48:47 	3b2226f9-b888-4012-8825-790e30449227	POST 	 undefined  	 /auth  
+20240124	19:49:26 	289b0cfe-d6bc-4875-8e9c-6ee01f707a98	POST 	 undefined  	 /register?username&password  
