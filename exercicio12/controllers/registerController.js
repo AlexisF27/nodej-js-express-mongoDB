@@ -17,13 +17,12 @@ const handleNewUser = async (request, response) => {
     //encrypt the password
     const hashedPwd = await bcrypt.hash(pwd, 10);
     //store the new user
-    const newUSer = { "username": user, "password": hashedPwd };
+    const newUSer = { "username": user, "roles": {"User": 2001}, "password": hashedPwd };
     userDB.setUsers([...userDB.users, newUSer]);
     await fsPromises.writeFile(
       path.join(__dirname, '..', 'model', 'users.json'),
       JSON.stringify(userDB.users)
     );
-    console.log(userDB.users);
     response.status(201).json({ 'success': `New user ${user} created` });
   } catch (error) {
     response.status(500).json({ 'message': error.message });

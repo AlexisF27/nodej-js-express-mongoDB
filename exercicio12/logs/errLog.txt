@@ -9,3 +9,9 @@
 20240118	12:50:13 	5b34c411-cbfc-4ff1-b6dd-a25b8ee48d5d	TypeError: request.json is not a function 
 20240118	12:50:27 	83dc97a5-3eca-4a72-aaec-3cefdd07ffae	TypeError: request.json is not a function 
 20240124	19:00:56 	3cfd6c1d-e15a-4470-aa94-92f72987c4c5	SyntaxError: Unexpected string in JSON at position 27 
+20240125	05:17:17 	04f1ac20-4420-494c-80f1-bc6b532dc257	TypeError: Cannot read properties of undefined (reading 'username') 
+20240125	05:17:19 	57077ac2-e33e-40a5-8028-70d2e70d5da0	TypeError: Cannot read properties of undefined (reading 'username') 
+20240125	05:18:25 	ce0f3693-d552-45ca-b48b-380794e900da	TypeError: Cannot read properties of undefined (reading 'username') 
+20240125	05:20:55 	0d7f72d6-5bd0-439d-9bc1-1c69b8427192	TypeError: Cannot read properties of undefined (reading 'username') 
+20240125	05:21:31 	796a61a9-2b0a-4646-aadb-759edeeebb2c	TypeError: Cannot read properties of undefined (reading 'username') 
+20240125	05:24:45 	c6cde624-0ab0-454e-a5f2-74638f107307	TypeError: Cannot read properties of undefined (reading 'username') 
