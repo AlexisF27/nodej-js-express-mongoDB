@@ -174,3 +174,9 @@
 20240125	05:26:20 	629a1c27-588f-463f-b52e-63881f521313	GET 	 undefined  	 /employees  
 20240125	05:26:59 	c714e05a-e755-401c-839f-e3e1f56aa25d	POST 	 undefined  	 /auth  
 20240125	05:27:12 	ea0286fd-c332-494a-bffd-c78f05af9bcf	POST 	 undefined  	 /employees?name=Alexis&age=25&city=Vila%20Nova%20de%20Gaia&isStudent=true  
+20240125	16:50:04 	e9cab523-92f1-4521-8a47-9f4e125ee726	POST 	 undefined  	 /register?username&password  
+20240125	16:51:48 	67257b2e-c140-4cfa-bdcf-47ee8afbf5a7	POST 	 undefined  	 /register?username&password  
+20240125	16:51:59 	66871822-3e3f-4622-b91a-f705182357b6	POST 	 undefined  	 /register?username&password  
+20240125	16:53:59 	4ab3a739-6979-42de-8a36-76497de97654	POST 	 undefined  	 /register?username&password  
+20240125	16:54:40 	f0951c09-73d6-48d6-ab61-4148a42b62d6	POST 	 undefined  	 /register?username&password  
+20240125	16:54:47 	9f6a0cc4-8800-4d7b-bf29-accef723a9ac	POST 	 undefined  	 /register?username&password  

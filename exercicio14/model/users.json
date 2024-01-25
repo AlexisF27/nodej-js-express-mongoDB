@@ -1,1 +1,18 @@
-[{"username":"Alexis","roles":{"User":2001,"Editor":1984,"Admin":5150},"password":"$2b$10$4TR3/tItJczybRpZG6CB0uICPiRTWevnUwis0wD8CzI7MbAM7v8/q"},{"username":"Daniel","roles":{"User":2001,"Editor":1984},"password":"$2b$10$k7sS0reD3k10yyfSM35xvOvHtUUAzNYAdduBVQD9PXZQhc5ZXEKkO"},{"username":"Schubert","roles":{"User":2001},"password":"$2b$10$TZw/91XGX3sQBYZEsKqGw.yrTFZSe6dqgJbMC0DQ7kB.KqOQk99ua","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNjaHViZXJ0IiwiaWF0IjoxNzA2MTYwNDE5LCJleHAiOjE3MDYyNDY4MTl9.fmNzB9J7h0LR2bosxC62KYJCXkVKL_hDhHxBaYLH3Mw"}]
+[
+  {
+    "username": "Alexis",
+    "roles": { "User": 2001, "Editor": 1984, "Admin": 5150 },
+    "password": "$2b$10$4TR3/tItJczybRpZG6CB0uICPiRTWevnUwis0wD8CzI7MbAM7v8/q"
+  },
+  {
+    "username": "Daniel",
+    "roles": { "User": 2001, "Editor": 1984 },
+    "password": "$2b$10$k7sS0reD3k10yyfSM35xvOvHtUUAzNYAdduBVQD9PXZQhc5ZXEKkO"
+  },
+  {
+    "username": "Schubert",
+    "roles": { "User": 2001 },
+    "password": "$2b$10$TZw/91XGX3sQBYZEsKqGw.yrTFZSe6dqgJbMC0DQ7kB.KqOQk99ua",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNjaHViZXJ0IiwiaWF0IjoxNzA2MTYwNDE5LCJleHAiOjE3MDYyNDY4MTl9.fmNzB9J7h0LR2bosxC62KYJCXkVKL_hDhHxBaYLH3Mw"
+  }
+]
