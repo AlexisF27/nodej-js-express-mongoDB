@@ -1,13 +1,21 @@
-# Shopping List React
+# Backend NodeJS - Express - MongoDB
 
 
-
-### Small project for backend with Node.js - Express - MongoDB
 TODOs
-- [x] Add styles with basic functionality
-- [x] List update
-- [ ] List sorting
-- [ ] Add redux
+- [x] Read and Write files (path)
+- [x] Record login logs, error logs
+- [x] Event Emitter
+- [x] Build Web Service
+- [x] Routing (express)
+- [x] Middleware
+- [x] MVC Rest API
+- [x] Registration
+- [x] Aunthentication
+- [x] JWT auth
+- [x] Authorizhation
+- [x] Conn Mongo DB
+- [x] Moongose Data Models
+- [x] Async Crud
 
 ### Run this project
 
@@ -18,6 +26,10 @@ TODOs
 $ npm init
 ```
 - Install some dependencies
+
+***NOTE:*** 
+- You can run all the dependencies in one line
+  - Example: npm install bcrypt cooki-parser cors ..., etc.
 
 ```shell
 $ npm install bcrypt
@@ -43,3 +55,26 @@ $ npm install mongoose
 ```shell
 $ npm install uuid
 ```
+
+- Install nodemon as dev dependecie
+
+```shell
+$ npm install nodemon --save-dev
+```
+
+- Replace "scripts" attribute so you can start nodemon with dev option
+
+```package.json
+"scripts": {
+    "dev": "nodemon server",
+    "start": "node server"
+  }
+```
+
+- Run the backend project
+  
+```shell
+$ npm run dev
+```
+
+
